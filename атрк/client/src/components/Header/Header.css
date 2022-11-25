@@ -1,0 +1,14 @@
+.mappy{
+    color:aliceblue;
+    font-size: 24px;
+}
+
+.container-map{
+    display: flex;
+    justify-content:space-between;
+}
+
+.body-map{
+    display: flex;
+    gap: 30px;
+}

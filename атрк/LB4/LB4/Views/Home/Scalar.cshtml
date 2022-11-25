@@ -1,0 +1,24 @@
+﻿@model LB4.Models.ScalarFunc
+
+@{
+    ViewData["Title"] = "Scalar";
+}
+
+<h1>Scalar</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Scalar" class="d-flex">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-4">
+                <input type="submit" value="Go" class="btn btn-primary" />
+            </div>
+        </form>
+        <h3>@ViewData["Count"]</h3>
+    </div>
+</div>

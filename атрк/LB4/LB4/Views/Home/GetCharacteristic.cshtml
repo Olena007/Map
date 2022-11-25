@@ -1,0 +1,44 @@
+﻿@model IEnumerable<LB4.Entities.Characteristic>
+
+@{
+    ViewData["Title"] = "GetCharacteristic";
+}
+
+<h1>GetCharacteristic</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProcessorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Memory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ScreenDiagonal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProcessorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Memory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ScreenDiagonal)
+            </td>
+            @*<td>
+                <a asp-action="Edit" asp-route-id="@item.CharacteristicId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CharacteristicId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CharacteristicId">Delete</a>
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>
