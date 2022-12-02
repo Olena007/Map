@@ -1,0 +1,32 @@
+.map-input{
+    display: flex;
+    margin-left: 5%;
+    gap: 20px;
+}
+
+.form-map{
+    width: 30%;
+}
+
+.firststation{
+    display: flex;
+    align-items: baseline;
+    gap: 30px;
+}
+
+.secondstation{
+    display: flex;
+    align-items: baseline;
+    gap: 50px;
+}
+
+.btn-custom{
+    display:flex;
+    width: 20%;
+    margin-top: 5%;
+}
+
+.map-google-main{
+    /* background-color: bisque; */
+    width: 70%;
+}
