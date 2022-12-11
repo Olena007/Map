@@ -91,13 +91,13 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("client")]
-        public IActionResult Client()
+        public IActionResult Client(JwtDto dto)
         {
             try
             {
                 var jwt = Request.Cookies["jwt"];
 
-                var token = _tokenProvider.Verify(jwt);
+                var token = _tokenProvider.Verify(dto);
 
                 var email = token.Claims.First(claim => claim.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name").Value;
                 var clientId = _clientProvider.GetIdByEmail(email);
